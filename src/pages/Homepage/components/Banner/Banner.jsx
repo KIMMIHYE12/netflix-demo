@@ -1,6 +1,6 @@
+import { Alert } from "bootstrap";
 import React from "react";
 import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
-import Alert from "react-bootstrap/Alert";
 import "./Banner.style.css";
 
 const Banner = () => {
@@ -11,7 +11,7 @@ const Banner = () => {
     <h1>Loading...</h1>;
   }
   if (isError) {
-    <Alert>{error.message}</Alert>;
+    <Alert varient='danger'>{error.message}</Alert>;
   }
   return (
     <div
