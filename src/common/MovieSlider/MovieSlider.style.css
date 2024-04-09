@@ -1,3 +1,15 @@
+@import url("https://use.typekit.net/xpb4pgc.css");
+
+.movie_carousel {
+  margin: 72px 0 24px;
+}
+
+.movie_title {
+  padding-left: 64px;
+  color: white;
+  font-family: "chaloops", sans-serif;
+}
+
 .carousel-container {
   overflow: hidden;
   height: 440px;
