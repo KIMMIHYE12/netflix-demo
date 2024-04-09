@@ -48,7 +48,7 @@ const Banner = () => {
           <div className='slide_items'>
             <img
               src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[0].backdrop_path}`}
-              alt={data?.results[0].title}
+              alt={`${data?.results[0].title}배경이미지`}
             />
             <div className='banner-text-area'>
               <h1>{data?.results[0].title}</h1>
@@ -69,7 +69,7 @@ const Banner = () => {
           <div className='slide_items'>
             <img
               src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[1].backdrop_path}`}
-              alt={data?.results[1].title}
+              alt={`${data?.results[1].title}배경이미지`}
             />
             <div className='banner-text-area'>
               <h1>{data?.results[1].title}</h1>
@@ -90,7 +90,7 @@ const Banner = () => {
           <div className='slide_items'>
             <img
               src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[4].backdrop_path}`}
-              alt={data?.results[4].title}
+              alt={`${data?.results[4].title}배경이미지`}
             />
             <div className='banner-text-area'>
               <h1>{data?.results[4].title}</h1>
@@ -111,7 +111,7 @@ const Banner = () => {
           <div className='slide_items'>
             <img
               src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[19].backdrop_path}`}
-              alt={data?.results[19].title}
+              alt={`${data?.results[19].title}배경이미지`}
             />
             <div className='banner-text-area'>
               <h1>{data?.results[19].title}</h1>
@@ -142,21 +142,25 @@ const Banner = () => {
         <SwiperSlide className='silde_item'>
           <img
             src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[0].poster_path}`}
+            alt={`${data?.results[0].title}포스터`}
           />
         </SwiperSlide>
         <SwiperSlide className='silde_item'>
           <img
             src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[1].poster_path}`}
+            alt={`${data?.results[1].title}포스터`}
           />
         </SwiperSlide>
         <SwiperSlide className='silde_item'>
           <img
             src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[4].poster_path}`}
+            alt={`${data?.results[4].title}포스터`}
           />
         </SwiperSlide>
         <SwiperSlide className='silde_item'>
           <img
             src={`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[19].poster_path}`}
+            alt={`${data?.results[19].title}포스터`}
           />
         </SwiperSlide>
       </Swiper>
