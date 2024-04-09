@@ -54,10 +54,7 @@ const Banner = () => {
               <h1>{data?.results[0].title}</h1>
               <span className='star_rating'>
                 <span
-                  style={{
-                    width: data?.results[0].vote_average * 10 + "%",
-                    backgroundImage: "url(" + images / star.png + ")",
-                  }}
+                  style={{ width: data?.results[0].vote_average * 10 + "%" }}
                   className='star_yellow'
                 ></span>
               </span>
@@ -78,10 +75,7 @@ const Banner = () => {
               <h1>{data?.results[1].title}</h1>
               <span className='star_rating'>
                 <span
-                  style={{
-                    width: data?.results[1].vote_average * 10 + "%",
-                    backgroundImage: "url(" + images / star.png + ")",
-                  }}
+                  style={{ width: data?.results[1].vote_average * 10 + "%" }}
                   className='star_yellow'
                 ></span>
               </span>
@@ -102,10 +96,7 @@ const Banner = () => {
               <h1>{data?.results[4].title}</h1>
               <span className='star_rating'>
                 <span
-                  style={{
-                    width: data?.results[4].vote_average * 10 + "%",
-                    backgroundImage: "url(" + images / star.png + ")",
-                  }}
+                  style={{ width: data?.results[4].vote_average * 10 + "%" }}
                   className='star_yellow'
                 ></span>
               </span>
@@ -126,10 +117,7 @@ const Banner = () => {
               <h1>{data?.results[19].title}</h1>
               <span className='star_rating'>
                 <span
-                  style={{
-                    width: data?.results[19].vote_average * 10 + "%",
-                    backgroundImage: "url(" + images / star.png + ")",
-                  }}
+                  style={{ width: data?.results[19].vote_average * 10 + "%" }}
                   className='star_yellow'
                 ></span>
               </span>

@@ -68,6 +68,7 @@
   display: inline-block;
   height: 27px;
   overflow: hidden;
+  background: url(./images/star.png) no-repeat;
 }
 
 .star_yellow {
