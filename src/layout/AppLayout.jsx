@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -7,9 +7,22 @@ import Navbar from "react-bootstrap/Navbar";
 import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const updateScroll = () => {
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateScroll);
+  }, []);
+
   return (
     <div className='nav_wrap'>
-      <Navbar expand='lg' className='navigation' data-bs-theme='dark'>
+      <Navbar
+        expand='lg'
+        className={`navigation ${scrollPosition > 58 ? "fixed" : ""}`}
+      >
         <Container fluid>
           <Navbar.Brand href='/'>
             <img width={100} src='/images/logo.svg' alt='로고 이미지' />

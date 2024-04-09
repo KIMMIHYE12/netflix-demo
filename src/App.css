@@ -1,8 +1,21 @@
 body {
   background-color: black !important;
-  color: white !important;
+  color: white;
 }
 
 .nav_wrap .navigation {
-  background-color: black;
+  width: 100%;
+  padding: 0.5rem 32px;
+  position: fixed;
+  top: 0;
+  background: none;
+  z-index: 100;
+}
+
+.nav_wrap .navigation a {
+  color: white;
+}
+
+.nav_wrap .navigation.fixed {
+  background: black;
 }
