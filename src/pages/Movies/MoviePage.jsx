@@ -1,8 +1,7 @@
-import { Collapse } from "bootstrap";
 import { Alert } from "bootstrap";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import MovieCard from "../../common/MovieCard/MovieCard";
 import ReactPaginate from "react-paginate";
