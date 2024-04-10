@@ -14,3 +14,15 @@
   overflow: hidden;
   height: 440px;
 }
+
+@media only screen and (max-width: 992px) {
+  .movie_title {
+    padding-left: 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movie_title {
+    padding-left: 24px;
+  }
+}

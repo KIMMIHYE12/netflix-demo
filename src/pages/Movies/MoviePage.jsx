@@ -1,7 +1,78 @@
-import React from "react";
+import { Collapse } from "bootstrap";
+import { Alert } from "bootstrap";
+import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
+import MovieCard from "../../common/MovieCard/MovieCard";
+import ReactPaginate from "react-paginate";
+import "./MoviePage.style.css";
 
 const MoviePage = () => {
-  return <div>MoviePage</div>;
+  const [query, setQuery] = useSearchParams();
+  const [page, setPage] = useState(1);
+  const keyword = query.get("q");
+  const { data, isLoading, isError, error } = useSearchMovieQuery({
+    keyword,
+    page,
+  });
+
+  const handlePageClick = ({ selected }) => {
+    setPage(selected + 1);
+  };
+
+  console.log("data2", data);
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+  if (isError) {
+    return <Alert variant='danger'>{error.message}</Alert>;
+  }
+
+  return (
+    <Container className='movie_list_container'>
+      <Row>
+        <Col lg={4} xs={12}>
+          <button>Action</button>
+        </Col>
+        <Col lg={8} xs={12} className='movie_list'>
+          <Row>
+            {data?.results.map((movie, index) => (
+              <Col key={index} lg={4} xs={12} className='movie_item'>
+                <MovieCard movie={movie} />
+              </Col>
+            ))}
+            {data?.results.map((movie, index) => (
+              <Col key={index} lg={4} xs={12} className='movie_item'>
+                <MovieCard movie={movie} />
+              </Col>
+            ))}
+          </Row>
+          <ReactPaginate
+            nextLabel='next >'
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={2}
+            pageCount={data?.total_pages}
+            previousLabel='< previous'
+            pageClassName='page-item'
+            pageLinkClassName='page-link'
+            previousClassName='page-item'
+            previousLinkClassName='page-link'
+            nextClassName='page-item'
+            nextLinkClassName='page-link'
+            breakLabel='...'
+            breakClassName='page-item'
+            breakLinkClassName='page-link'
+            containerClassName='pagination'
+            activeClassName='active'
+            renderOnZeroPageCount={null}
+            forcePage={page - 1}
+          />
+        </Col>
+      </Row>
+    </Container>
+  );
 };
 
 export default MoviePage;

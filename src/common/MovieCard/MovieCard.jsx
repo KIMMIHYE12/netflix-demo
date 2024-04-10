@@ -5,7 +5,7 @@ import "./MovieCard.style.css";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
-
+  console.log("장르", genreData);
   const showGenre = (genreIdList) => {
     if (!genreData) return [];
     const genreNameList = genreIdList.map((id) => {
@@ -30,10 +30,12 @@ const MovieCard = ({ movie }) => {
         {showGenre(movie.genre_ids).map((genre, index) => (
           <Badge bg='danger'>{genre}</Badge>
         ))}
-        <div>
-          <div>{movie.vote_everage}</div>
-          <div>{movie.popularity}</div>
-          <div>{movie.audult ? "over18" : "under18"}</div>
+        <div className='movie_info'>
+          <div className='vote_ever'>{movie.vote_everage}</div>
+          <div className='popularity'>{movie.popularity}</div>
+          <div className='movie_audult'>
+            {movie.audult ? "over18" : "under18"}
+          </div>
         </div>
       </div>
     </div>

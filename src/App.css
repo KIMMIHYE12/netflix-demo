@@ -19,3 +19,7 @@ body {
 .nav_wrap .navigation.fixed {
   background: black;
 }
+
+.navbar-toggler-icon {
+  background-image: url(./images/ico_menu.png) !important;
+}

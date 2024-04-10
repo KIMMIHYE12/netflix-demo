@@ -34,3 +34,48 @@
   font-family: source-sans-pro, sans-serif;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 576px) {
+  .movie-card {
+    width: 230px;
+    height: 345px;
+  }
+}
+
+@media only screen and (max-width: 439px) {
+  .movie-card {
+    width: 200px;
+    height: 300px;
+  }
+
+  .overlay h1 {
+    font-size: 1.2rem;
+  }
+
+  .movie_info {
+    margin-top: 20px;
+  }
+  .popularity,
+  .movie_audult {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .movie-card {
+    width: 160px;
+    height: 240px;
+  }
+  .overlay h1 {
+    font-size: 1rem;
+  }
+
+  .overlay span {
+    font-size: 10px;
+  }
+
+  .popularity,
+  .movie_audult {
+    font-size: 12px;
+  }
+}
