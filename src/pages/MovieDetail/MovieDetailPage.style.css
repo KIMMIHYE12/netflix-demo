@@ -1,0 +1,41 @@
+@import url("https://use.typekit.net/xpb4pgc.css");
+
+.movie_detail_container {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left calc((50vw - 170px) - 340px) top;
+}
+
+.movie_detail_info {
+  padding: 100px 0 30px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  color: white;
+}
+
+.bn_img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bn_img img {
+  width: 70%;
+}
+
+.movie_detail_info h1 {
+  font-family: "chaloops", sans-serif;
+  font-weight: 700;
+}
+
+.movie_detail_info p {
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

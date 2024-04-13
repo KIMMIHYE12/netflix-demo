@@ -6,21 +6,25 @@ import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import MovieCard from "../../common/MovieCard/MovieCard";
 import ReactPaginate from "react-paginate";
 import "./MoviePage.style.css";
+import MovieFilter from "./components/MovieFilter/MovieFilter";
 
 const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const [page, setPage] = useState(1);
   const keyword = query.get("q");
+  const [genreId, setGenreId] = useState([]);
+
   const { data, isLoading, isError, error } = useSearchMovieQuery({
     keyword,
     page,
   });
 
+  console.log("data", data);
+
   const handlePageClick = ({ selected }) => {
     setPage(selected + 1);
   };
 
-  console.log("data2", data);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -32,20 +36,19 @@ const MoviePage = () => {
     <Container className='movie_list_container'>
       <Row>
         <Col lg={4} xs={12}>
-          <button>Action</button>
+          <MovieFilter genreId={genreId} setGenreId={setGenreId} />
         </Col>
         <Col lg={8} xs={12} className='movie_list'>
           <Row>
-            {data?.results.map((movie, index) => (
-              <Col key={index} lg={4} xs={12} className='movie_item'>
-                <MovieCard movie={movie} />
-              </Col>
-            ))}
-            {data?.results.map((movie, index) => (
-              <Col key={index} lg={4} xs={12} className='movie_item'>
-                <MovieCard movie={movie} />
-              </Col>
-            ))}
+            {data?.results
+              .filter((item) =>
+                genreId.every((id) => item.genre_ids.includes(id))
+              )
+              .map((movie, index) => (
+                <Col key={index} lg={6} xs={12}>
+                  <MovieCard movie={movie} />
+                </Col>
+              ))}
           </Row>
           <ReactPaginate
             nextLabel='next >'
