@@ -2,7 +2,7 @@ import React from "react";
 import { Badge, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useMovieDetailQuery } from "../../hooks/useMovieDetail";
-import MovieRecommend from "./components/MovieRecommend/MovieRecommend";
+import MovieRecommendSlide from "./components/MovieRecommend/MoiveRecommendSlider";
 import MovieVideo from "./components/MovieVideo/MovieVideo";
 import "./MovieDetailPage.style.css";
 
@@ -80,7 +80,7 @@ const MovieDetailPage = () => {
         </Row>
       </div>
       <div>
-        <MovieRecommend id={id} />
+        <MovieRecommendSlide id={id} />
       </div>
       <div>
         <MovieVideo id={id} />
