@@ -1,9 +1,6 @@
 import React from "react";
 import { useMovieRecommendQuery } from "../../../../hooks/useMovieRecommend";
-import { responsive } from "../../../../constans/reponsive";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import MovieCard from "../../../../common/MovieCard/MovieCard";
 
 const MovieRecommend = ({ id }) => {
   const { data: recommend } = useMovieRecommendQuery({ id });
@@ -12,9 +9,11 @@ const MovieRecommend = ({ id }) => {
   return (
     <div>
       추천영화
-      {recommend.map((movie, index) => (
-        <MovieCard movie={movie} key={index} />
-      ))}
+      <ul>
+        {recommend.map((movie, index) => (
+          <li>{movie.title}</li>
+        ))}
+      </ul>
       {/* <Carousel
         infinite={true}
         centerMode={true}
