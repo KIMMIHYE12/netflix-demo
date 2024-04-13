@@ -1,29 +1,12 @@
 import React from "react";
 import { useMovieRecommendQuery } from "../../../../hooks/useMovieRecommend";
-import { responsive } from "../../../../constans/reponsive";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import MovieCard from "../../../../common/MovieCard/MovieCard";
 
 const MovieRecommend = ({ id }) => {
   const { data: recommend } = useMovieRecommendQuery({ id });
   console.log("추천", recommend);
 
-  return (
-    <div>
-      <Carousel
-        infinite={true}
-        centerMode={true}
-        itemClass='movie-slider p-1'
-        containerClass='carousel-container'
-        responsive={responsive}
-      >
-        {recommend.map((movie, index) => (
-          <MovieCard movie={movie} key={index} />
-        ))}
-      </Carousel>
-    </div>
-  );
+  return <div>recomend</div>;
 };
 
 export default MovieRecommend;
