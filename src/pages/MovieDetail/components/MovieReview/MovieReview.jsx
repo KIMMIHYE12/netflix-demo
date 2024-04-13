@@ -1,5 +1,6 @@
 import React from "react";
 import { useMovieReviewQuery } from "../../../../hooks/useMovieReview";
+import MovieReviewItem from "../MovieReviewItem/MovieReviewItem";
 import "./MovieReview.style.css";
 
 const MovieReview = ({ id }) => {
@@ -9,8 +10,6 @@ const MovieReview = ({ id }) => {
     isError,
     error,
   } = useMovieReviewQuery({ id });
-
-  console.log("리뷰", review);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -22,11 +21,14 @@ const MovieReview = ({ id }) => {
 
   return (
     <div className='review_content'>
-      <ul>
-        {review.map((item) => (
-          <li>{item.content}</li>
-        ))}
-      </ul>
+      {review.map((item) => (
+        <ul>
+          <li>
+            <MovieReviewItem item={item} />
+          </li>
+        </ul>
+      ))}
+      <ul></ul>
     </div>
   );
 };
