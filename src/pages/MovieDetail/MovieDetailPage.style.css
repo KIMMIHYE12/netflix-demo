@@ -15,7 +15,7 @@
     90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.5) 100%
   );
   color: white;
 }
@@ -38,4 +38,8 @@
   font-family: source-sans-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.movie_content_wrap {
+  padding: 0 32px;
 }
