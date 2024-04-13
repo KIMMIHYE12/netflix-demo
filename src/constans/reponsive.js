@@ -5,7 +5,7 @@ export const responsive = {
   },
   desktop: {
     breakpoint: { max: 1920, min: 1024 },
-    items: 6,
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 576 },

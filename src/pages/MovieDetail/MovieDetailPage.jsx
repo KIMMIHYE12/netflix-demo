@@ -3,6 +3,7 @@ import { Badge, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useMovieDetailQuery } from "../../hooks/useMovieDetail";
 import MovieRecommend from "./components/MovieRecommend/MovieRecommend";
+import MovieVideo from "./components/MovieVideo/MovieVideo";
 import "./MovieDetailPage.style.css";
 
 const MovieDetailPage = () => {
@@ -80,6 +81,9 @@ const MovieDetailPage = () => {
       </div>
       <div>
         <MovieRecommend id={id} />
+      </div>
+      <div>
+        <MovieVideo id={id} />
       </div>
     </div>
   );
