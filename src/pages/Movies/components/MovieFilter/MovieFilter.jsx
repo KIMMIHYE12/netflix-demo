@@ -1,6 +1,6 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
 import { useMovieGenreQuery } from "../../../../hooks/useMovieGenre";
+import "./MovieFilter.style.css";
 
 const MovieFilter = ({ genreId, setGenreId }) => {
   const { data: genreData } = useMovieGenreQuery();
@@ -17,18 +17,17 @@ const MovieFilter = ({ genreId, setGenreId }) => {
 
   return (
     <div>
-      <Row>
+      <div className='filter_btn_wrap'>
         {genreData?.map((item, index) => (
-          <Col key={index}>
-            <button
-              classNave='filter_button'
-              onClick={(event) => filterId(event, item.id)}
-            >
-              {item.name}
-            </button>
-          </Col>
+          <button
+            className='filter_button'
+            onClick={(event) => filterId(event, item.id)}
+            key={index}
+          >
+            {item.name}
+          </button>
         ))}
-      </Row>
+      </div>
     </div>
   );
 };

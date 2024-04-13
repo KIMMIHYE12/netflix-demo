@@ -1,6 +1,12 @@
 .review_content {
   color: white;
 }
+@import url("https://use.typekit.net/xpb4pgc.css");
+.review_content h2 {
+  font-family: "chaloops", sans-serif;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
 
 .review_content ul {
   padding: 0;

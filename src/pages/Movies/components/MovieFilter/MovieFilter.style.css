@@ -1,0 +1,13 @@
+.filter_button {
+  margin: 8px;
+  padding: 4px 24px;
+  border: 1px solid #dc3545;
+  background: none;
+  color: white;
+  white-space: nowrap;
+  border-radius: 8px;
+}
+
+.filter_button.active {
+  background: #dc3545;
+}

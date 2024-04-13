@@ -21,6 +21,7 @@ const MovieReview = ({ id }) => {
 
   return (
     <div className='review_content'>
+      <h2>Reviews</h2>
       {review.map((item) => (
         <ul>
           <li>
