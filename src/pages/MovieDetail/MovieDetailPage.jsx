@@ -47,9 +47,9 @@ const MovieDetailPage = () => {
             </div>
           </Col>
           <Col lg={7} xs={12}>
-            <div>
+            <div className='label_items'>
               {movie?.genres.map((item, index) => (
-                <Badge>{item.name}</Badge>
+                <Badge className='label'>{item.name}</Badge>
               ))}
             </div>
             <h1>{movie?.title}</h1>
@@ -59,22 +59,22 @@ const MovieDetailPage = () => {
             </div>
 
             <p>{movie?.overview}</p>
-            <ul>
-              <li>
-                <Badge>Budget</Badge>
-                <span>${movie?.budget}</span>
+            <ul className='movie_infos'>
+              <li className='label_items'>
+                <Badge className='label'>Budget</Badge>
+                <span>${movie?.budget.toLocaleString("ko-KR")}</span>
               </li>
-              <li>
-                <Badge>Revenue</Badge>
-                <span>${movie?.revenue}</span>
+              <li className='label_items'>
+                <Badge className='label'>Revenue</Badge>
+                <span>${movie?.revenue.toLocaleString("ko-KR")}</span>
               </li>
-              <li>
-                <Badge>Release Date</Badge>
+              <li className='label_items'>
+                <Badge className='label'>Release Date</Badge>
                 <span>{movie?.release_date}</span>
               </li>
-              <li>
-                <Badge>Runtime</Badge>
-                <span>{movie?.runtime}</span>
+              <li className='label_items'>
+                <Badge className='label'>Runtime</Badge>
+                <span>{movie?.runtime} min</span>
               </li>
             </ul>
           </Col>

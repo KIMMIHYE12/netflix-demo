@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import MovieCard from "../../../../common/MovieCard/MovieCard";
 import { responsive } from "../../../../constans/reponsive";
 import { useMovieRecommendQuery } from "../../../../hooks/useMovieRecommend";
+import "./MovieRecommendSlider.style.css";
 
 const MovieRecommendSlide = ({ id }) => {
   const {
@@ -22,7 +23,8 @@ const MovieRecommendSlide = ({ id }) => {
   }
 
   return (
-    <div>
+    <div className='recommend_items'>
+      <h2>Recommended movies</h2>
       <Carousel
         infinite={true}
         centerMode={true}

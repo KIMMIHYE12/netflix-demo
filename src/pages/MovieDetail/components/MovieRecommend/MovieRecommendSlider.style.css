@@ -1,16 +1,12 @@
 @import url("https://use.typekit.net/xpb4pgc.css");
 
-.review_content {
+.recommend_items {
+  margin-top: 80px;
   color: white;
 }
 
-.review_content h2 {
+.recommend_items h2 {
   font-family: "chaloops", sans-serif;
   font-weight: 700;
   margin-bottom: 16px;
-}
-
-.review_content ul {
-  padding: 0;
-  list-style: none;
 }

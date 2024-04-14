@@ -29,15 +29,38 @@
   width: 70%;
 }
 
+.label_items .label {
+  padding: 4px 8px;
+  margin-right: 8px;
+  background-color: #dc3545 !important;
+  border-radius: 4px;
+}
+
 .movie_detail_info h1 {
+  margin: 16px 0;
   font-family: "chaloops", sans-serif;
   font-weight: 700;
 }
 
 .movie_detail_info p {
+  margin-bottom: 24px;
   font-family: source-sans-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.movie_infos {
+  padding: 0;
+  list-style: none;
+}
+
+.movie_infos li {
+  margin-bottom: 12px;
+}
+
+.movie_infos li .label {
+  font-size: 1rem;
+  margin-right: 16px;
 }
 
 .movie_content_wrap {
