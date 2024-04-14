@@ -66,3 +66,9 @@
 .movie_content_wrap {
   padding: 0 32px;
 }
+
+@media only screen and (max-width: 768px) {
+  .detail_info_items {
+    padding: 48px 32px 0 !important;
+  }
+}

@@ -38,7 +38,7 @@ const MovieDetailPage = () => {
         }}
       >
         <Row className='movie_detail_info'>
-          <Col lg={3} xs={12}>
+          <Col md={3} xs={12}>
             <div className='bn_img'>
               <img
                 src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2/${movie?.poster_path}`}
@@ -46,7 +46,7 @@ const MovieDetailPage = () => {
               />
             </div>
           </Col>
-          <Col lg={7} xs={12}>
+          <Col md={7} xs={12} className='detail_info_items'>
             <div className='label_items'>
               {movie?.genres.map((item, index) => (
                 <Badge className='label'>{item.name}</Badge>
