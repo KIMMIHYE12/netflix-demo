@@ -1,11 +1,21 @@
-.modal_content {
-  display: flex;
+.btn_movie {
+  background: none !important;
+  border: 1px solid #dc3545 !important;
+}
+
+.btn_movie:hover {
+  background: #dc3545 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal_content_wrap {
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
 
-.modal_content .modal-dialog {
-  max-width: 100%;
+.modal_content_wrap .modal-dialog {
+  max-width: none;
 }
 
 .modal-body {

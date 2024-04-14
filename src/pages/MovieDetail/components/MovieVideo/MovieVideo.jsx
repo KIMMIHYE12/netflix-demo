@@ -30,11 +30,10 @@ const MovieVideo = ({ id }) => {
 
   return (
     <div>
-      <Button variant='primary' onClick={handleShow}>
+      <Button variant='primary' onClick={handleShow} className='btn_movie'>
         예고편 보기
       </Button>
-
-      <Modal show={show} onHide={handleClose} className='modal_content'>
+      <Modal show={show} onHide={handleClose} className='modal_content_wrap'>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <YouTube videoId={video && video[0]?.key} opts={opts} />
