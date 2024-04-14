@@ -6,12 +6,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.movie_item {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .pagination {
+  justify-content: center;
   margin: 50px 0 120px;
+}
+
+.pagination li.active a {
+  background: #dc3545;
+  border-radius: 4px;
+}
+
+.pagination li a:hover {
+  color: white;
+  background: #d8737d;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-item.disabled a {
+  background: none;
+  color: #666;
+}
+
+.pagination li a {
+  color: white;
+  background: none;
+  border: 0;
 }

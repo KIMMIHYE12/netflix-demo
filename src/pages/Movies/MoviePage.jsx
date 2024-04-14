@@ -38,25 +38,25 @@ const MoviePage = () => {
         <Col lg={4} xs={12}>
           <MovieFilter genreId={genreId} setGenreId={setGenreId} />
         </Col>
-        <Col lg={8} xs={12} className='movie_list'>
+        <Col lg={8} xs={12}>
           <Row>
             {data?.results
               .filter((item) =>
                 genreId.every((id) => item.genre_ids.includes(id))
               )
               .map((movie, index) => (
-                <Col key={index} lg={6} xs={12}>
+                <Col className='movie_list' key={index} lg={4} md={6} xs={12}>
                   <MovieCard movie={movie} />
                 </Col>
               ))}
           </Row>
           <ReactPaginate
-            nextLabel='next >'
+            nextLabel='>'
             onPageChange={handlePageClick}
-            pageRangeDisplayed={3}
-            marginPagesDisplayed={2}
+            pageRangeDisplayed={6}
+            marginPagesDisplayed={1}
             pageCount={data?.total_pages}
-            previousLabel='< previous'
+            previousLabel='<'
             pageClassName='page-item'
             pageLinkClassName='page-link'
             previousClassName='page-item'
