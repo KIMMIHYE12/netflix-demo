@@ -77,13 +77,13 @@ const MovieDetailPage = () => {
                 <span>{movie?.runtime} min</span>
               </li>
             </ul>
+            <div>
+              <MovieVideo id={id} />
+            </div>
           </Col>
         </Row>
       </div>
       <div className='movie_content_wrap'>
-        <div>
-          <MovieVideo id={id} />
-        </div>
         <div>
           <MovieReview id={id} />
         </div>
